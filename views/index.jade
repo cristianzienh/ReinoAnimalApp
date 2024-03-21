@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h2= title
+  div
+  table
+    thead
+      tr 
+        th="Nome"      
+        th="Habitat"
+    tbody
+      each animal in animals
+        tr
+          td=animal.nome
+          td=animal.habitat

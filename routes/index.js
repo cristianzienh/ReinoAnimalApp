@@ -3,7 +3,9 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  let result = [{nome: "baleia", habitat: "oceanos"},
+                {nome: "vaca", habitat: "pastagens"}]
+  res.render('index', { title: 'Mamíferos' , animals: result });
 });
 
 module.exports = router;
